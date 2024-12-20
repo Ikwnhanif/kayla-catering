@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Button } from "flowbite-react";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
@@ -120,9 +121,9 @@ const Contact = () => {
 
         {/* Map Section */}
         <div className="mt-16">
-          <h3 className="text-3xl font-bold text-gray-800 font-sans text-center">
+          <p className="text-3xl font-semibold text-gray-800 font-poppins text-center">
             Our Location
-          </h3>
+          </p>
           <div className="mt-4">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.8592654541058!2d110.34988707588928!3d-7.909766992113471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5597861e9ea3%3A0x183d4af52669054b!2sKayla%20Catering%2C%20Cake%2C%20Snack%20%26%20Bakery!5e0!3m2!1sid!2sid!4v1734695941050!5m2!1sid!2sid"
@@ -134,6 +135,46 @@ const Contact = () => {
               title="Google Map"
             ></iframe>
           </div>
+        </div>
+      </div>
+      <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
+        <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
+        <div className="mx-auto max-w-2xl lg:max-w-4xl">
+          <img
+            alt=""
+            src="https://tailwindui.com/plus/img/logos/workcation-logo-indigo-600.svg"
+            className="mx-auto h-12"
+          />
+          <figure className="mt-10">
+            <blockquote className="text-center text-3xl font-semibold text-gray-900 ">
+              <h1>“Got questions? Please Contact us!.”</h1>
+            </blockquote>
+            <figcaption className="mt-10 ">
+              <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+                <div className="font-semibold text-gray-900">Yourname</div>
+                <svg
+                  width={3}
+                  height={3}
+                  viewBox="0 0 2 2"
+                  aria-hidden="true"
+                  className="fill-gray-900"
+                >
+                  <circle r={1} cx={1} cy={1} />
+                </svg>
+                <div className="text-gray-600">CEO of Workcation</div>
+              </div>
+              <div className="flex justify-center mt-4">
+                <Button color="light" size="xl">
+                  <FaWhatsapp
+                    className="flex items-center mr-1"
+                    size={24}
+                  ></FaWhatsapp>
+                  WhatsApp
+                </Button>
+              </div>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>

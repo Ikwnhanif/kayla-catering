@@ -1,44 +1,12 @@
 import React from "react";
-import {
-  CakeIcon,
-  UserGroupIcon,
-  ClipboardDocumentCheckIcon,
-  TruckIcon,
-} from "@heroicons/react/24/outline";
-
-const features = [
-  {
-    name: "Menu yang Disesuaikan",
-    description:
-      "Kami menawarkan berbagai pilihan menu yang dapat disesuaikan dengan kebutuhan dan preferensi Anda, mulai dari hidangan pembuka hingga pencuci mulut.",
-    icon: CakeIcon,
-  },
-  {
-    name: "Layanan Profesional",
-    description:
-      "Tim kami terdiri dari profesional berpengalaman yang siap membantu Anda dalam setiap langkah, memastikan acara Anda berjalan lancar.",
-    icon: UserGroupIcon,
-  },
-  {
-    name: "Pengiriman Tepat Waktu",
-    description:
-      "Kami menjamin pengiriman makanan tepat waktu ke lokasi acara Anda, sehingga Anda dapat fokus pada hal-hal penting lainnya.",
-    icon: TruckIcon,
-  },
-  {
-    name: "Kualitas Terjamin",
-    description:
-      "Kami menggunakan bahan-bahan berkualitas tinggi dan segar untuk memastikan setiap hidangan yang kami sajikan lezat dan memuaskan.",
-    icon: ClipboardDocumentCheckIcon,
-  },
-];
+import { features } from "../data/services";
 
 const Services = () => {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base/7 font-semibold text-indigo-600">
+          <h2 className="font-semibold font-poppins text-indigo-600 text-xl">
             Layanan Catering Terbaik
           </h2>
           <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-balance">

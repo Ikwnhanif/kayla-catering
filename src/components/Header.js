@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import logo from "../assets/images/letter-k.png";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -27,11 +27,7 @@ const Header = () => {
         <div className="flex lg:flex-1 items-center">
           <a href="/" className="-m-1.5 p-1.5 flex items-center">
             {" "}
-            <img
-              alt="Kayla Catering Logo"
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
-            />
+            <img alt="Kayla Catering Logo" src={logo} className="h-8 w-auto" />
             <span className="ml-2 text-lg font-bold text-gray-900">
               Kayla Catering
             </span>{" "}

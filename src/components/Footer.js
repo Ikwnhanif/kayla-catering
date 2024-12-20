@@ -4,11 +4,6 @@ import {
   FaInstagram,
   FaTwitter,
   FaHome,
-  FaMailBulk,
-  FaPhone,
-  FaHeadphones,
-  FaTimes,
-  FaTimesCircle,
   FaClock,
 } from "react-icons/fa";
 import {
@@ -24,7 +19,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h2 className="text-xl font-poppins font-bold mb-4 ml-2">
+            <h2 className="text-xl font-poppins font-bold mb-4 ">
               Tentang Kami
             </h2>
             <p className="text-sm font-poppins font-thin text-gray-300">
@@ -39,7 +34,7 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <h2 className="text-xl font-poppins font-bold mb-4 items-center ml-2">
+            <h2 className="text-xl font-poppins font-bold mb-4 items-center">
               Kontak
             </h2>
             <div className="flex mb-2 items-center">
@@ -75,7 +70,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h2 className="text-xl font-poppins font-bold mb-4 ml-2">
+            <h2 className="text-xl font-poppins font-bold mb-4 ">
               Social Media
             </h2>
             <div className="flex font-poppins font-thin items-center mb-2">

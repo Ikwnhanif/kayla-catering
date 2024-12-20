@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  LockClosedIcon,
-  ServerIcon,
-  CakeIcon,
-  CheckIcon,
-} from "@heroicons/react/20/solid";
+import { CheckIcon } from "@heroicons/react/20/solid";
 
 const About = () => {
   return (
