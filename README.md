@@ -1,4 +1,4 @@
-Kayla Catering Project Overview (https://kaylacatering.vercel.app/)
+Kayla Catering Project Overview (https://kaylacatering.vercel.app/) (On process)
 
 The Kayla Catering project is a web application designed to showcase the services offered by Kayla Catering, a catering business. The website features a modern and user-friendly interface, built using React and styled with Tailwind CSS. Key components of the project include:
 
