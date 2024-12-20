@@ -8,7 +8,12 @@ module.exports = {
     flowbite.content(),
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
   },
   plugins: [
     // ...

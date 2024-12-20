@@ -37,6 +37,32 @@
   }
 }
 
-html {
+html,
+body {
+  height: 100%; /* Pastikan body dan html memiliki tinggi 100% */
+  margin: 0; /* Hapus margin default */
   scroll-behavior: smooth;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Atur arah kolom */
+  min-height: 100vh; /* Pastikan wrapper setidaknya setinggi viewport */
+}
+
+main {
+  flex: 1; /* Membuat main mengambil ruang yang tersisa */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Pusatkan konten secara vertikal */
+  align-items: center; /* Pusatkan konten secara horizontal */
+  text-align: center; /* Rata tengah teks */
+  padding: 20px; /* Tambahkan padding jika perlu */
+}
+
+footer {
+  background-color: #333; /* Contoh warna latar belakang footer */
+  color: white; /* Warna teks footer */
+  padding: 20px; /* Tambahkan padding */
+  text-align: center; /* Rata tengah teks */
 }

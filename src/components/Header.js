@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Dialog, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  DevicePhoneMobileIcon,
+} from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -20,14 +24,18 @@ const Header = () => {
         aria-label="Global"
         className="flex items-center justify-between p-6 lg:px-8"
       >
-        <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
-            <span className="sr-only">Kayla Catering</span>
+        <div className="flex lg:flex-1 items-center">
+          <a href="/" className="-m-1.5 p-1.5 flex items-center">
+            {" "}
             <img
-              alt=""
+              alt="Kayla Catering Logo"
               src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
               className="h-8 w-auto"
             />
+            <span className="ml-2 text-lg font-bold text-gray-900">
+              Kayla Catering
+            </span>{" "}
+            {/* Tambahkan teks di sini */}
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -45,15 +53,19 @@ const Header = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold text-gray-900"
+              className="text-md font-semibold font-poppins text-gray-900"
             >
               {item.name}
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
+          <DevicePhoneMobileIcon aria-hidden="true" className="size-6" />
+          <a
+            href="#"
+            className="text-sm font-poppins font-semibold text-gray-900"
+          >
+            +62 821-3440-6948 <span aria-hidden="true"></span>
           </a>
         </div>
       </nav>
@@ -65,13 +77,17 @@ const Header = () => {
         <div className="fixed inset-0 z-50" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Kayla Catering</span>
+            <a href="/" className="-m-1.5 p-1.5 flex items-center">
+              {" "}
               <img
-                alt=""
+                alt="Kayla Catering Logo"
                 src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
                 className="h-8 w-auto"
               />
+              <span className="ml-2 text-lg font-bold text-gray-900">
+                Kayla Catering
+              </span>{" "}
+              {/* Tambahkan teks di sini */}
             </a>
             <button
               type="button"
@@ -89,18 +105,19 @@ const Header = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-poppins font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     {item.name}
                   </a>
                 ))}
               </div>
-              <div className="py-6">
+              <div className="py-6 flex items-center">
+                <DevicePhoneMobileIcon aria-hidden="true" className="size-6" />
                 <a
                   href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-poppins font-semibold text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  +62 821-3440-6948
                 </a>
               </div>
             </div>

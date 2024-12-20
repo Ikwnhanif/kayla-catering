@@ -44,7 +44,10 @@ const Home = () => {
               >
                 Pesan Sekarang
               </a>
-              <a href="#" className="text-sm font-semibold text-gray-900">
+              <a
+                href="/gallery"
+                className="text-sm font-semibold text-gray-900"
+              >
                 Lihat Menu <span aria-hidden="true">→</span>
               </a>
             </div>

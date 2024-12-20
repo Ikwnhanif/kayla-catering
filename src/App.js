@@ -8,6 +8,7 @@ import Services from "./components/Services";
 import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import Nopage from "./page/Nopage";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Nopage />} />
         </Routes>
       </main>
       <Footer />
