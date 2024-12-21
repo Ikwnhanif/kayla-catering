@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "flowbite-react";
-import { FaFacebook, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 const Contact = () => {
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
@@ -110,7 +110,7 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="mt-4 w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700 transition duration-200"
+                  className="mt-4 w-full bg-pink-600 text-white font-semibold py-2 rounded-md hover:bg-pink-500 transition duration-200"
                 >
                   Send Message
                 </button>

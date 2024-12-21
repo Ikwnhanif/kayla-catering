@@ -23,7 +23,7 @@ const Home = () => {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <div className="relative rounded-full px-3 py-1 text-sm text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/30">
               Menyediakan layanan catering terbaik untuk setiap acara.{" "}
               {/* <a href="#" className="font-semibold text-indigo-600">
                 <span aria-hidden="true" className="absolute inset-0" />
@@ -32,10 +32,10 @@ const Home = () => {
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+            <h1 className="text-5xl font-semibold font-poppins tracking-tight text-gray-900 sm:text-6xl">
               Catering Berkualitas untuk Setiap Acara
             </h1>
-            <p className="mt-8 text-lg font-medium text-gray-500 sm:text-xl">
+            <p className="mt-8 text-lg font-thin font-poppins text-gray-500 sm:text-xl">
               Kami menyediakan berbagai pilihan menu yang lezat dan layanan
               profesional untuk memastikan acara Anda berjalan lancar. Dari
               pernikahan hingga acara perusahaan, kami siap memenuhi kebutuhan
@@ -72,6 +72,9 @@ const Home = () => {
       </div>
       {/* ---------------end section----------- */}
       <div className="relative isolate overflow-hidden px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+        <h2 className="text-center text-4xl font-poppins font-semibold  text-gray-900 sm:text-5xl lg:text-balance mb-10">
+          Tentang Kami
+        </h2>
         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
           <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
             <div className="lg:pr-4">
@@ -167,8 +170,8 @@ const Home = () => {
         </div>
         <div className="bg-white py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-lg/8 font-semibold text-gray-900">
-              Dipercaya oleh Tim Inovatif Terbaik
+            <h2 className="text-center text-md sm:text-2xl  font-semibold text-gray-900">
+              Akreditasi dan Sertifikasi
             </h2>
             <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
               <img
