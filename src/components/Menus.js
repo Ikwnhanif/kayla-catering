@@ -5,7 +5,7 @@ const Menus = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-        Kayla Catering Menu
+        Kayla Catering Produk
       </h1>
 
       {/* Gubug Packages Section */}

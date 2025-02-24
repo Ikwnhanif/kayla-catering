@@ -23,14 +23,12 @@ const Footer = () => {
               Tentang Kami
             </h2>
             <p className="text-sm font-poppins font-thin text-gray-300">
-              Kayla Catering adalah penyedia layanan katering yang berkomitmen
-              menyajikan hidangan lezat dan berkualitas tinggi untuk berbagai
-              acara, mulai dari pernikahan hingga acara perusahaan. Dengan
-              pengalaman bertahun-tahun, kami menggunakan bahan-bahan segar dan
-              resep yang teruji untuk memastikan setiap hidangan memuaskan. Tim
-              profesional kami siap membantu Anda merencanakan setiap detail
-              acara, menawarkan pilihan menu yang beragam, sehingga semua tamu
-              dapat menikmati pengalaman kuliner yang tak terlupakan.
+              Kayla Catering merupakan Professional Catering Event dan
+              Pernikahan yang sudah berdiri sejak tahun 2007. Memiliki
+              pengalaman 18 tahun di bisnis jasa boga dengan dukungan tenaga
+              profesional, mutu produk yang bersertifikat Halal BPJPH (Kemenag)
+              dan SLHS, cita rasa dan pelayanan prima serta pelayanan yang
+              sesuai dengan standar protokol kesehatan.
             </p>
           </div>
           <div>
@@ -40,8 +38,8 @@ const Footer = () => {
             <div className="flex mb-2 items-center">
               <FaHome size={32} /> {/* Ukuran ikon */}
               <a className="text-sm font-poppins font-thin text-gray-300 ml-2">
-                Jl. Parangtritis Km. 13, Bakulan, Patalan, Jetis, Bantul,
-                Yogyakarta 55781
+                Jl. Parangtritis Km.13, Timur Perempatan Bakulan 20 meter,
+                Patalan, Jetis, Bantul
               </a>
             </div>
             <div className="flex mb-2 items-center">

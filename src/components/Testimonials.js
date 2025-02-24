@@ -1,67 +1,70 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { posts } from "../data/testimonials";
+
 const Testimonials = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, once: true });
+  }, []);
+
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <section className="bg-white0 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-            Testimonials
+        {/* Header */}
+        <div data-aos="fade-up" className="mx-auto max-w-2xl text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            Testimoni Pelanggan
           </h2>
-          <p className="mt-2 text-lg/8 text-gray-600">
-            Berikut kata mereka yang sudah menggunakan catering di Kayla
-            Catering
+          <p className="mt-4 text-lg text-gray-600">
+            Apa kata mereka yang telah menggunakan layanan Kayla Catering?
           </p>
         </div>
-        <div className="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-          {posts.map((post) => (
+
+        {/* List of Testimonials */}
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post, index) => (
             <article
               key={post.id}
-              className="flex max-w-xl flex-col items-start justify-between"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              className="relative flex flex-col rounded-2xl bg-white p-6 shadow-lg transition-transform hover:-translate-y-2 hover:shadow-xl"
             >
-              <div className="flex items-center gap-x-4 text-xs">
-                <time dateTime={post.datetime} className="text-gray-500">
-                  {post.date}
-                </time>
-                <a
-                  href={post.category.href}
-                  className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
-                >
+              {/* Date & Category */}
+              <div className="flex items-center gap-x-3 text-xs text-gray-500">
+                <time dateTime={post.datetime}>{post.date}</time>
+                <span className="rounded-full bg-red-200 px-3 py-1.5 text-xs font-medium">
                   {post.category.title}
-                </a>
+                </span>
               </div>
-              <div className="group relative">
-                <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-                  <a href={post.href}>
-                    <span className="absolute inset-0" />
-                    {post.title}
-                  </a>
-                </h3>
-                <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-                  {post.description}
-                </p>
-              </div>
-              <div className="relative mt-8 flex items-center gap-x-4">
+
+              {/* Testimonial Content */}
+              <h3 className="mt-3 text-lg font-semibold text-gray-900">
+                {post.title}
+              </h3>
+              <p className="mt-3 text-sm text-gray-600 line-clamp-3">
+                {post.description}
+              </p>
+
+              {/* Author */}
+              <div className="mt-6 flex items-center gap-x-4">
                 <img
-                  alt=""
                   src={post.author.imageUrl}
-                  className="size-10 rounded-full bg-gray-50"
+                  alt=""
+                  className="h-12 w-12 rounded-full object-cover shadow-md"
                 />
-                <div className="text-sm/6">
-                  <p className="font-semibold text-gray-900">
-                    <a href={post.author.href}>
-                      <span className="absolute inset-0" />
-                      {post.author.name}
-                    </a>
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">
+                    {post.author.name}
                   </p>
-                  <p className="text-gray-600">{post.author.role}</p>
+                  <p className="text-sm text-gray-600">{post.author.role}</p>
                 </div>
               </div>
             </article>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

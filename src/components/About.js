@@ -1,5 +1,6 @@
 import React from "react";
 import { CheckIcon } from "@heroicons/react/20/solid";
+// import logohalal from "../assets/images/logohal.png";
 
 const About = () => {
   return (
@@ -46,10 +47,8 @@ const About = () => {
                 Layanan Catering Terbaik untuk Setiap Acara
               </h1>
               <p className="mt-6 text-xl/8 text-gray-700">
-                Kami menyediakan layanan catering yang disesuaikan untuk
-                berbagai acara, mulai dari pernikahan hingga acara perusahaan.
-                Dengan menu yang beragam dan layanan profesional, kami siap
-                memenuhi kebutuhan Anda.
+                Kayla Catering merupakan Professional Catering Event dan
+                Pernikahan yang sudah berdiri sejak tahun 2007.
               </p>
             </div>
           </div>
@@ -57,7 +56,7 @@ const About = () => {
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             alt="Catering Service"
-            src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
+            src="/images/isian1.jpg"
             className="w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem]"
           />
         </div>
@@ -65,10 +64,10 @@ const About = () => {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base/7 text-gray-700 lg:max-w-lg">
               <p>
-                Kami percaya bahwa setiap acara harus diisi dengan makanan yang
-                lezat dan pengalaman yang tak terlupakan. Tim kami berkomitmen
-                untuk memberikan layanan terbaik dan memastikan setiap detail
-                diperhatikan.
+                Memiliki pengalaman 18 tahun di bisnis jasa boga dengan dukungan
+                tenaga profesional, mutu produk yang bersertifikat Halal BPJPH
+                (Kemenag) dan SLHS, cita rasa dan pelayanan prima serta
+                pelayanan yang sesuai dengan standar protokol kesehatan.
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
@@ -78,9 +77,9 @@ const About = () => {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Menu yang Disesuaikan.
+                      Berpengalaman di bisnis jasa boga selama 18 tahun
                     </strong>{" "}
-                    Kami menawarkan berbagai pilihan menu yang dapat disesuaikan
+                    Menyediakan berbagai pilihan menu yang dapat disesuaikan
                     dengan kebutuhan dan preferensi Anda.
                   </span>
                 </li>
@@ -91,7 +90,7 @@ const About = () => {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Layanan Profesional.
+                      Harga terjangkau
                     </strong>{" "}
                     Tim kami terdiri dari profesional berpengalaman yang siap
                     membantu Anda dalam setiap langkah.
@@ -104,10 +103,74 @@ const About = () => {
                   />
                   <span>
                     <strong className="font-semibold text-gray-900">
-                      Pengalaman yang Tak Terlupakan.
+                      Bersertifikat 100% Halal BPJPH (No. ID34120000139510921)
                     </strong>{" "}
-                    Kami berkomitmen untuk memberikan pengalaman catering yang
-                    luar biasa untuk setiap acara.
+                    100% terjamin kehalalannya.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <CheckIcon
+                    aria-hidden="true"
+                    className="mt-1 size-5 flex-none text-indigo-600"
+                  />
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Bersertifikat Laik Higiene Sanitasi (No.
+                      022000780155700020001)
+                    </strong>{" "}
+                    Standar kebersihan dan keamanan pangan yang terjaga.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <CheckIcon
+                    aria-hidden="true"
+                    className="mt-1 size-5 flex-none text-indigo-600"
+                  />
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Cita rasa dijamin prima
+                    </strong>{" "}
+                    Menghadirkan hidangan lezat dengan kualitas terbaik.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <CheckIcon
+                    aria-hidden="true"
+                    className="mt-1 size-5 flex-none text-indigo-600"
+                  />
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Pelayanan selalu siap & tanggap
+                    </strong>{" "}
+                    Kami siap melayani dengan sigap dan profesional.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <CheckIcon
+                    aria-hidden="true"
+                    className="mt-1 size-5 flex-none text-indigo-600"
+                  />
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Trendy crew handal & kekinian
+                    </strong>{" "}
+                    Crew yang trendy dan berpengalaman dalam menangani berbagai
+                    jenis acara.
+                  </span>
+                </li>
+                <li className="flex gap-x-3">
+                  <CheckIcon
+                    aria-hidden="true"
+                    className="mt-1 size-5 flex-none text-indigo-600"
+                  />
+                  <span>
+                    <strong className="font-semibold text-gray-900">
+                      Kemasan eksklusif
+                    </strong>{" "}
+                    Penyajian yang elegan dan menarik untuk setiap pesanan.
+                    Dengan komitmen kami untuk memberikan pengalaman catering
+                    yang luar biasa, Kayla Catering siap menjadi bagian dari
+                    momen istimewa Anda.
                   </span>
                 </li>
               </ul>
@@ -129,44 +192,19 @@ const About = () => {
       </div>
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-center text-lg/8 font-semibold text-gray-900">
-            Dipercaya oleh Tim Inovatif Terbaik
+          <h2 className="text-center text-2xl font-semibold text-gray-900">
+            Akreditasi dan Sertifikasi Keamanan Pangan
           </h2>
-          <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+          <div className="mx-auto mt-10 grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-2 sm:gap-x-5 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             <img
-              alt="Transistor"
-              src="https://tailwindui.com/plus/img/logos/158x48/transistor-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              alt="Logohalal"
+              src="/images/logohalal.png"
+              className="col-span-2 max-h-60  w-full object-contain lg:col-span-1"
             />
             <img
               alt="Reform"
-              src="https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            />
-            <img
-              alt="Tuple"
-              src="https://tailwindui.com/plus/img/logos/158x48/tuple-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            />
-            <img
-              alt="SavvyCal"
-              src="https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-            />
-            <img
-              alt="Statamic"
-              src="https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg"
-              width={158}
-              height={48}
-              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              src="/images/logoslhs.png"
+              className="col-span-2 max-h-60 w-full object-contain lg:col-span-1"
             />
           </div>
         </div>

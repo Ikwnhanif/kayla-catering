@@ -3,31 +3,54 @@ import {
   UserGroupIcon,
   ClipboardDocumentCheckIcon,
   TruckIcon,
+  InboxStackIcon,
+  HandRaisedIcon,
+  HandThumbUpIcon,
+  DocumentCheckIcon,
 } from "@heroicons/react/24/outline";
 
 export const features = [
   {
-    name: "Menu yang Disesuaikan",
+    name: "Berpengalaman 18 Tahun",
     description:
-      "Kami menawarkan berbagai pilihan menu yang dapat disesuaikan dengan kebutuhan dan preferensi Anda, mulai dari hidangan pembuka hingga pencuci mulut.",
+      "Menyediakan berbagai pilihan menu yang dapat disesuaikan dengan kebutuhan dan preferensi Anda.",
     icon: CakeIcon,
   },
   {
-    name: "Layanan Profesional",
+    name: "Harga Terjangkau",
     description:
-      "Tim kami terdiri dari profesional berpengalaman yang siap membantu Anda dalam setiap langkah, memastikan acara Anda berjalan lancar.",
+      "Tim profesional kami siap membantu dalam setiap langkah perencanaan catering Anda.",
     icon: UserGroupIcon,
   },
   {
-    name: "Pengiriman Tepat Waktu",
+    name: "Bersertifikat Halal BPJPH (No. ID34120000139510921)",
+    description: "100% terjamin kehalalannya.",
+    icon: DocumentCheckIcon,
+  },
+  {
+    name: "Bersertifikat Laik Higiene Sanitasi (No. 022000780155700020001)",
+    description: "Standar kebersihan dan keamanan pangan yang terjaga.",
+    icon: ClipboardDocumentCheckIcon,
+  },
+  {
+    name: "Cita Rasa Terjamin ",
+    description: "Menghadirkan hidangan lezat dengan kualitas terbaik.",
+    icon: HandThumbUpIcon,
+  },
+  {
+    name: "Tim Handal & Kekinian",
     description:
-      "Kami menjamin pengiriman makanan tepat waktu ke lokasi acara Anda, sehingga Anda dapat fokus pada hal-hal penting lainnya.",
+      "Crew yang trendy dan berpengalaman dalam menangani berbagai jenis acara.",
+    icon: UserGroupIcon,
+  },
+  {
+    name: "Pelayanan Cepat & Responsif",
+    description: "Kami siap melayani dengan sigap dan profesional.",
     icon: TruckIcon,
   },
   {
-    name: "Kualitas Terjamin",
-    description:
-      "Kami menggunakan bahan-bahan berkualitas tinggi dan segar untuk memastikan setiap hidangan yang kami sajikan lezat dan memuaskan.",
-    icon: ClipboardDocumentCheckIcon,
+    name: "Kemasan Eksklusif",
+    description: "Penyajian yang elegan dan menarik untuk setiap pesanan.",
+    icon: InboxStackIcon,
   },
 ];

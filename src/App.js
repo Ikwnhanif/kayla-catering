@@ -10,21 +10,25 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Nopage from "./page/Nopage";
 import Menus from "./components/Menus";
+import FAQ from "./components/Faq";
+import FloatingWhatsApp from "./components/FloatingWA";
 
 const App = () => {
   return (
     <Router>
       <>
         <Header />
+        <FloatingWhatsApp />
         <main className="container mx-auto">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            {/* <Route path="/about" element={<About />} /> */}
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/menus" element={<Menus />} />
             <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="*" element={<Nopage />} />
           </Routes>
         </main>
