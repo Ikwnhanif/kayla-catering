@@ -1,92 +1,83 @@
 import React from "react";
-import { gubugs, buffets } from "../data/paket";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { menuData } from "../data/menu";
 
 const Menus = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+    appendDots: (dots) => (
+      <div className="w-full flex justify-center items-center mt-5">
+        <ul className="flex gap-2">{dots}</ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <div className="w-4 h-4 bg-gray-200 rounded-full transition-all duration-300 hover:bg-red-500 cursor-pointer"></div>
+    ),
+  };
+
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-      <h1 className="text-4xl font-bold text-center mb-12 text-gray-800">
-        Kayla Catering Produk
-      </h1>
-
-      {/* Gubug Packages Section */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-6 text-gray-700">
-          Gubug Packages
-        </h2>
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-          {gubugs.map((packageItem) => (
-            <div
-              key={packageItem.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
-            >
-              <img
-                src={packageItem.image}
-                alt={packageItem.title}
-                className="aspect-square w-full rounded-lg bg-gray-200 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
-              />
-              <div className="p-6">
-                <div className="flex justify-between items-center">
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    {packageItem.title}
-                  </h3>
-                  <span className="bg-red-500 text-white font-semibold py-1 px-3 rounded-lg shadow-md">
-                    {packageItem.price}
-                  </span>
+    <section className="py-16 ">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <h1 className="text-4xl font-semibold font-poppins text-center text-red-600 mb-4">
+          Menu Spesial Kami 🍽️
+        </h1>
+        <p className="text-lg text-center font-poppins text-gray-600 mb-6">
+          Pilih dari berbagai hidangan lezat yang kami tawarkan, dibuat dengan
+          bahan berkualitas dan disajikan dengan cinta.
+        </p>
+        {Object.keys(menuData).map((category) => (
+          <div key={category} className="mb-16 relative">
+            <h2 className="text-3xl font-semibold text-red-700 capitalize mb-4 text-center">
+              {category.replace(/([A-Z])/g, " $1").trim()}
+            </h2>
+            <Slider {...settings}>
+              {menuData[category].map((item) => (
+                <div key={item.id} className="px-2">
+                  <div className="shadow-lg rounded-lg overflow-hidden bg-white">
+                    <img
+                      src={item.imageSrc}
+                      alt={item.imageAlt}
+                      className="w-full h-80 object-cover"
+                    />
+                    <div className="p-4 text-center">
+                      <h3 className="text-lg font-semibold text-gray-800">
+                        {item.name}
+                      </h3>
+                      <p className="text-sm text-gray-500 mt-1">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <ul className="mt-2 text-gray-700">
-                  <li>{packageItem.menu1}</li>
-                  <li>{packageItem.menu2}</li>
-                  <li>{packageItem.menu3}</li>
-                  <li>{packageItem.menu4}</li>
-                  {packageItem.menu5 && <li>{packageItem.menu5}</li>}
-                  {packageItem.menu6 && <li>{packageItem.menu6}</li>}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Buffet Packages Section */}
-      <section>
-        <h2 className="text-3xl font-semibold mb-6 text-gray-700">
-          Buffet Packages
-        </h2>
-        <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-          {buffets.map((buffetItem) => (
-            <div
-              key={buffetItem.id}
-              className="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
-            >
-              <img
-                src={buffetItem.image}
-                alt={buffetItem.title}
-                className="aspect-square w-full rounded-lg bg-gray-200 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
-              />
-              <div className="p-6">
-                <div className="flex justify-between items-center">
-                  <h3 className="text-xl font-semibold text-gray-800">
-                    {buffetItem.title}
-                  </h3>
-                  <span className="bg-red-500 text-white font-semibold py-1 px-3 rounded-lg shadow-md">
-                    {buffetItem.price}
-                  </span>
-                </div>
-                <ul className="mt-2 text-gray-700">
-                  <li>{buffetItem.item1}</li>
-                  <li>{buffetItem.item2}</li>
-                  <li>{buffetItem.item3}</li>
-                  <li>{buffetItem.item4}</li>
-                  {buffetItem.item5 && <li>{buffetItem.item5}</li>}
-                  {buffetItem.item6 && <li>{buffetItem.item6}</li>}
-                  {buffetItem.item7 && <li>{buffetItem.item7}</li>}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    </div>
+              ))}
+            </Slider>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

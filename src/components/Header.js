@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/images/letter-k.png";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -25,7 +24,7 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newOpacity = Math.max(1 - scrollY / 200, 0.8); // Opacity akan turun hingga 0.5
+      const newOpacity = Math.max(1 - scrollY / 200, 0.85);
       setOpacity(newOpacity);
     };
 
@@ -36,22 +35,22 @@ const Header = () => {
   return (
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-opacity duration-500 backdrop-blur-md bg-white/80 border-b border-gray-200/30"
-      style={{ opacity }} // Mengubah opacity berdasarkan scroll
+      style={{ opacity }}
     >
       <nav
         aria-label="Global"
-        className="flex items-center justify-between p-6 lg:px-8"
+        className="flex items-center justify-between px-6 py-3 lg:px-16 lg:py-2"
       >
-        <div className="flex lg:flex-1 items-center">
-          <a href="/" className="-m-1.5 p-1.5 flex items-center">
+        {/* Logo (Digeser ke kanan dengan margin-left) */}
+        <div className="flex lg:flex-1">
+          <a href="/" className="lg:ml-20 p-1.5">
+            {" "}
+            {/* Tambah margin-left */}
             <img
               alt="Kayla Catering Logo"
               src="/images/logokayla.png"
-              className="h-16 w-auto transition-transform duration-300 hover:scale-105"
+              className="h-12 w-auto lg:h-16 transition-transform duration-300 hover:scale-105"
             />
-            <span className="ml-2 text-lg font-bold text-gray-900">
-              Kayla Catering
-            </span>
           </a>
         </div>
 
@@ -68,12 +67,12 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:gap-x-12">
+        <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-md font-semibold font-poppins text-gray-900 transition-colors duration-300 hover:text-pink-600"
+              className="text-sm font-semibold font-poppins text-gray-900 transition-colors duration-300 hover:text-pink-600"
             >
               {item.name}
             </a>
@@ -84,7 +83,7 @@ const Header = () => {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
           <DevicePhoneMobileIcon
             aria-hidden="true"
-            className="size-6 text-gray-700"
+            className="size-5 text-gray-700"
           />
           <a
             href="#"
@@ -104,15 +103,12 @@ const Header = () => {
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
         <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <a href="/" className="-m-1.5 p-1.5 flex items-center">
+            <a href="/" className="p-1.5">
               <img
                 alt="Kayla Catering Logo"
-                src={logo}
-                className="h-8 w-auto"
+                src="/images/logokayla.png"
+                className="h-10 w-auto"
               />
-              <span className="ml-2 text-lg font-bold text-gray-900">
-                Kayla Catering
-              </span>
             </a>
             <button
               type="button"

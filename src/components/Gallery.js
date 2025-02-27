@@ -11,30 +11,33 @@ const Gallery = () => {
   useEffect(() => {
     const galleryItems = galleryRef.current.children;
 
-    gsap.fromTo(
-      galleryItems,
-      { opacity: 0, y: 50, scale: 0.9 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        stagger: 0.2,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: galleryRef.current,
-          start: "top 85%",
-          end: "bottom 50%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
+    gsap.set(galleryItems, { opacity: 0, y: 50, scale: 0.9 });
+
+    gsap.utils.toArray(galleryItems).forEach((item) => {
+      gsap.fromTo(
+        item,
+        { opacity: 0, y: 50, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 90%", // Saat elemen hampir masuk viewport
+            end: "top 20%", // Saat elemen keluar viewport
+            toggleActions: "play reverse play reverse", // Animasi balik saat elemen tidak terlihat
+          },
+        }
+      );
+    });
   }, []);
 
   return (
-    <section className="bg-gray-50 pt-28 pb-16">
+    <section className="pt-20 pb-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-4xl font-extrabold text-gray-900 sm:text-5xl mb-12">
+        <h2 className="text-center text-4xl font-bold font-poppins text-red-600 sm:text-5xl mb-12">
           ✨ Galeri Menu Kami ✨
         </h2>
 

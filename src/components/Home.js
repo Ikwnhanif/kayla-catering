@@ -1,56 +1,85 @@
-import React, { useRef, useEffect } from "react";
-import { products } from "../data/product";
-import { Button } from "flowbite-react";
-import { FaWhatsapp } from "react-icons/fa";
+import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { menuData } from "../data/menu";
+import Services from "./Services";
+import Menus from "./Menus";
+import Contact from "./Contact";
+import Testimonials from "./Testimonials";
 gsap.registerPlugin(ScrollTrigger);
-
 const Home = () => {
   const heroRef = useRef(null);
-  const productsRef = useRef(null);
-  const contactRef = useRef(null);
+  const blobRef = useRef(null);
 
-  useEffect(() => {
-    // Hero Section Animation
+  useLayoutEffect(() => {
     gsap.fromTo(
       heroRef.current,
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }
     );
 
-    // ScrollTrigger Animation
-    [productsRef, contactRef].forEach((ref) => {
-      if (ref.current) {
-        gsap.fromTo(
-          ref.current.children,
-          { opacity: 0, y: 50 },
-          {
-            opacity: 1,
-            y: 0,
-            stagger: 0.2,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: ref.current,
-              start: "top 85%",
-              toggleActions: "play none none none",
-            },
-          }
-        );
-      }
-    });
+    gsap.fromTo(
+      blobRef.current,
+      { opacity: 0 },
+      { opacity: 0.2, duration: 1, ease: "power3.out" }
+    );
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+    appendDots: (dots) => (
+      <div className="w-full flex justify-center items-center mt-5">
+        <ul className="flex gap-2">{dots}</ul>
+      </div>
+    ),
+
+    customPaging: (i) => (
+      <div className="w-4 h-4 bg-gray-200 rounded-full transition-all duration-300 hover:bg-red-500 cursor-pointer "></div>
+    ),
+  };
+
   return (
-    <div className="bg-white text-gray-900">
+    <div className=" text-gray-900">
       {/* Hero Section */}
-      <div className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center bg-white overflow-hidden">
+      <div
+        ref={heroRef}
+        className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center  overflow-hidden"
+      >
         {/* Blob Background */}
-        <div className="absolute inset-0 -z-10 flex items-center justify-center">
+        <div
+          ref={blobRef}
+          className="absolute inset-0 -z-10 flex items-center justify-center"
+        >
           <svg
-            className="w-[800px] h-[800px] opacity-20 animate-float"
+            className="w-[800px] h-[800px] opacity-60 animate-float"
             viewBox="0 0 200 200"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -70,60 +99,101 @@ const Home = () => {
           Kayla Catering adalah <strong>Professional Catering Event</strong> dan
           <strong> Pernikahan</strong> yang berdiri sejak 2007. Dengan
           pengalaman
-          <strong> 18 tahun</strong>, kami menghadirkan cita rasa terbaik,
-          layanan berkualitas, dan standar kebersihan tinggi.
+          <strong> 18 tahun </strong>di bisnis jasa boga. Dengan dukungan tenaga{" "}
+          <strong>Profesional</strong> , mutu produk yang bersertifikat{" "}
+          <strong>Halal BPJPH (Kemenag) dan SLHS</strong>, cita rasa dan
+          pelayanan prima serta pelayanan yang sesuai dengan standar protokol
+          kesehatan.
         </p>
-        <div className="mt-8">
+
+        {/* Tombol CTA */}
+        <div className="mt-8 flex space-x-6">
+          {/* Tombol Hubungi Kami */}
           <a
-            href="#kontak"
-            className="bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-full text-lg shadow-md transition duration-300 transform hover:scale-105"
+            href="/contact"
+            className="liquid-button relative inline-block px-5 py-4 text-lg font-mono text-white transition-transform duration-300 transform bg-red-500 rounded-full shadow-md overflow-hidden border-2 border-red-400"
           >
             Hubungi Kami
+            <span className="liquid absolute inset-0"></span>
+          </a>
+
+          {/* Tombol Lihat Menu */}
+          <a
+            href="/menus"
+            className="liquid-button relative inline-block px-5 py-4 text-lg font-mono text-white transition-transform duration-300 transform bg-amber-500 rounded-full shadow-md overflow-hidden border-2 border-amber-400"
+          >
+            Lihat Menu
+            <span className="liquid absolute inset-0"></span>
           </a>
         </div>
       </div>
 
+      {/* CSS Animasi */}
       <style>
         {`
-  @keyframes float {
-    0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(20px) rotate(5deg); }
-    100% { transform: translateY(0px) rotate(0deg); }
-  }
-  .animate-float {
-    animation: float 6s infinite ease-in-out;
-  }
-`}
-      </style>
+          /* Animasi Floating */
+          @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+          }
+          .animate-float {
+            animation: float 6s infinite ease-in-out;
+          }
 
-      {/* Product Section */}
-      <div ref={productsRef} className="py-16 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-semibold">Menu Kami</h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Pilih hidangan terbaik untuk acara Anda.
-          </p>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {products.slice(0, 8).map((product) => (
-              <div
-                key={product.id}
-                className="group block overflow-hidden rounded-lg shadow-md bg-white"
-              >
-                <img
-                  alt={product.imageAlt}
-                  src={product.imageSrc}
-                  className="w-full h-64 object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-                />
-                <h3 className="mt-4 text-xl font-medium">{product.name}</h3>
-                <p className="text-lg font-semibold text-indigo-600">
-                  {product.price}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      {/* Section */}
+          /* Liquid Button */
+          .liquid-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+          }
+
+          .liquid-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.8);
+          }
+
+          .liquid-button:nth-child(2):hover {
+            box-shadow: 0px 0px 15px rgba(0, 255, 0, 0.8);
+          }
+
+          .liquid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -100%;
+            left: -50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, rgba(255,255,255,0) 50%);
+            transform: translateY(0);
+            transition: transform 0.6s ease-out;
+          }
+
+          .liquid-button:hover .liquid {
+            transform: translateY(100%);
+          }
+        `}
+      </style>
+      {/* End Hero Section */}
+
+      {/* About */}
+      <section>
+        <Services />
+      </section>
+      {/* End About */}
+
+      {/* Menu Section */}
+      <section>
+        <Menus />
+      </section>
+      {/* End Menu Section */}
+      {/* Testimonials */}
+      <section>
+        <Testimonials />
+      </section>
+      {/* Contact */}
+      <section>
+        <Contact />
+      </section>
     </div>
   );
 };

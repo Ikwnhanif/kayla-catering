@@ -23,12 +23,9 @@ const Footer = () => {
               Tentang Kami
             </h2>
             <p className="text-sm font-poppins font-thin text-gray-300">
-              Kayla Catering merupakan Professional Catering Event dan
-              Pernikahan yang sudah berdiri sejak tahun 2007. Memiliki
-              pengalaman 18 tahun di bisnis jasa boga dengan dukungan tenaga
-              profesional, mutu produk yang bersertifikat Halal BPJPH (Kemenag)
-              dan SLHS, cita rasa dan pelayanan prima serta pelayanan yang
-              sesuai dengan standar protokol kesehatan.
+              Selamat datang di Kayla catering, dengan senang hati kami hadir
+              dihadapan anda semua untuk menyajikan hidangan dan pelayanan
+              terbaik dari kami.
             </p>
           </div>
           <div>
@@ -72,22 +69,26 @@ const Footer = () => {
               Social Media
             </h2>
             <div className="flex font-poppins font-thin items-center mb-2">
-              <FaFacebook size={20} />{" "}
-              <p href="#" className="text-gray-300  hover:text-white ml-2">
-                Facebook
-              </p>
+              <FaFacebook size={20} />
+              <a
+                href="https://www.mbizmarket.co.id/p/ud-endra-p1X1/catalog?fbclid=IwY2xjawIs0A9leHRuA2FlbQIxMQABHRDCB1y1FWaSifMMmTyZ2ghBPq5stAZg8oHz89Ul9s5pHlgquN6zo1-lNw_aem_AmhfkTAPRvC0QtZSJxLIJA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white ml-2"
+              >
+                Mbiz Market
+              </a>
             </div>
             <div className="flex font-poppins font-thin items-center mb-2">
-              <FaInstagram size={20} />{" "}
-              <p href="#" className="text-gray-300  hover:text-white ml-2">
+              <FaInstagram size={20} />
+              <a
+                href="https://www.instagram.com/kaylacakesnackbakery/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white ml-2"
+              >
                 Instagram
-              </p>
-            </div>
-            <div className="flex font-poppins font-thin items-center mb-2">
-              <FaTwitter size={20} />{" "}
-              <p href="#" className="text-gray-300  hover:text-white ml-2">
-                Twitter
-              </p>
+              </a>
             </div>
           </div>
         </div>

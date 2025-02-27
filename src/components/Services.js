@@ -29,21 +29,40 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="bg-white py-24 sm:py-32">
+    <section className=" py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Bagian Header */}
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-semibold text-red-600 text-xl">
-            Layanan Catering Premium
+        <div className="mx-auto max-w-4xl text-center">
+          <h2 className="font-semibold text-red-600 font-poppins text-4xl">
+            Kayla Catering
           </h2>
-          <p className="mt-3 text-4xl font-bold text-gray-900 sm:text-5xl">
+          <p className="mt-3 text-4xl font-roboto font-bo text-gray-900 sm:text-2xl">
             Sajian Lezat untuk Momen Spesial Anda
           </p>
-          <p className="mt-5 text-lg text-gray-700">
-            Kami menghadirkan layanan catering berkualitas tinggi untuk berbagai
-            acara, mulai dari pernikahan, ulang tahun, hingga acara perusahaan.
-            Nikmati hidangan lezat dengan cita rasa terbaik dan layanan
-            profesional yang siap memenuhi setiap kebutuhan Anda.
+          <p className="mt-5 text-lg text-gray-700 text-justify">
+            Berbekal pengalaman luas di industri kuliner berbintang, Kayla
+            Catering hadir sebagai wujud dedikasi dalam menghadirkan hidangan
+            berkualitas tinggi dengan cita rasa istimewa.
+          </p>
+          <p className="mt-3 text-lg text-gray-700 text-justify">
+            Sejak didirikan pada tahun 2007, kami telah menjadi bagian dari
+            berbagai momen istimewa, mulai dari pernikahan megah, acara
+            korporat, gathering, hingga layanan santapan dalam bentuk
+            lunch/dinner box dan bancakan syukuran.
+          </p>
+          <p className="mt-3 text-lg text-gray-700 text-justify">
+            Kepercayaan dari berbagai kalangan, termasuk pejabat negara, tokoh
+            publik, pengusaha, hingga selebriti nasional dan internasional,
+            menjadi bukti komitmen kami dalam memberikan pelayanan terbaik.
+            Kini, Kayla Catering terus berkembang dengan semangat baru, di mana
+            generasi penerus turut serta dalam menjaga warisan cita rasa dan
+            profesionalisme yang telah kami bangun.
+          </p>
+          <p className="mt-3 text-lg text-gray-700 text-justify">
+            Dengan kualitas bahan terbaik, racikan bumbu autentik, serta
+            pelayanan yang ramah dan profesional, Kayla Catering selalu berusaha
+            menghadirkan pengalaman kuliner yang tak terlupakan untuk setiap
+            pelanggan.
           </p>
         </div>
 
@@ -75,21 +94,34 @@ const Services = () => {
         </div>
 
         {/* Akreditasi dan Sertifikasi */}
-        <div className="mt-20 py-16">
-          <h2 className="text-center text-2xl font-bold text-gray-900">
-            Akreditasi dan Sertifikasi Keamanan Pangan
+        <div className=" py-16 ">
+          <h2 className="text-center text-3xl font-semibold font-poppins text-red-600">
+            Sertifikasi Keamanan Pangan
           </h2>
           <div className="mx-auto mt-10 flex flex-wrap justify-center gap-12 max-w-4xl">
-            <img
-              alt="Logo Halal"
-              src="/images/logohalal.png"
-              className="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105"
-            />
-            <img
-              alt="Logo SLHS"
-              src="/images/logoslhs.png"
-              className="h-32 w-auto object-contain transition-transform duration-300 hover:scale-105"
-            />
+            {/* Logo Halal */}
+            <div className="text-center">
+              <img
+                alt="Logo Halal"
+                src="/images/logohalal.png"
+                className="h-60 w-auto object-contain transition-transform duration-300 hover:scale-110 "
+              />
+              <p className="mt-2 text-gray-700 text-md font-semibold">
+                BPJPH No. ID34120000139510921
+              </p>
+            </div>
+
+            {/* Logo SLHS */}
+            <div className="text-center">
+              <img
+                alt="Logo SLHS"
+                src="/images/logoslhs.png"
+                className="h-60 w-auto object-contain transition-transform duration-300 hover:scale-110"
+              />
+              <p className="mt-2 text-gray-700 text-md font-semibold ">
+                SLHS No. 022000780155700020001
+              </p>
+            </div>
           </div>
         </div>
       </div>

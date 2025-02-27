@@ -148,7 +148,7 @@ export const posts = [
     title: "Pelayanan Cepat & Tepat Waktu",
     href: "#",
     description:
-      "Makanannya datang tepat waktu, masih hangat, dan rasanya luar biasa. Layanan catering yang sangat dapat diandalkan!",
+      "Kalau belum Pernah mencoba jangan sekali sekali menghujat, jadi yok monggo. Dijamin mantap dari harga dengan rasa",
     date: "10 Desember 2023",
     datetime: "2023-12-10",
     category: { title: "Testimoni", href: "#" },

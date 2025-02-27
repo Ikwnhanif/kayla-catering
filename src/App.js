@@ -10,16 +10,15 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Nopage from "./page/Nopage";
 import Menus from "./components/Menus";
-import FAQ from "./components/Faq";
 import FloatingWhatsApp from "./components/FloatingWA";
-
+import FAQ from "./components/Faq";
 const App = () => {
   return (
     <Router>
       <>
         <Header />
         <FloatingWhatsApp />
-        <main className="container mx-auto">
+        <main className="container mx-auto pt-10">
           <Routes>
             <Route path="/" element={<Home />} />
             {/* <Route path="/about" element={<About />} /> */}

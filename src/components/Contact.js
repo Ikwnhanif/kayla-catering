@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="relative bg-white px-6 py-24 sm:py-32">
+    <div className="relative px-6 py-24 sm:py-32">
       {/* Header */}
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+        <h2 className="text-3xl font-bold text-red-600 sm:text-4xl">
           Hubungi Kami
         </h2>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-gray-600 font-roboto">
           Jika Anda memiliki pertanyaan, silakan hubungi kami!
         </p>
       </div>
@@ -98,7 +98,7 @@ const Contact = () => {
 
       {/* Map Section */}
       <div className="mt-16">
-        <h3 className="text-3xl font-semibold text-gray-800 text-center">
+        <h3 className="text-3xl font-semibold font-roboto text-red-600 text-center">
           Lokasi Kami
         </h3>
         <div className="mt-4">
