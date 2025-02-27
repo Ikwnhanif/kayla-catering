@@ -30,7 +30,9 @@ const Contact = () => {
 
           <div className="mt-6 space-y-4">
             <div>
-              <h4 className="font-semibold text-gray-800">📞 Telepon:</h4>
+              <h4 className="font-semibold text-gray-800">
+                📞 Telepon WhatsApp:
+              </h4>
               <p className="text-gray-600">
                 +62 821-3440-6948 / +62 813-9378-8688
               </p>
@@ -113,31 +115,6 @@ const Contact = () => {
           ></iframe>
         </div>
       </div>
-
-      {/* WhatsApp Floating Button */}
-      <motion.a
-        href="https://wa.me/6282134406948?text=Halo,%20saya%20tertarik%20dengan%20layanan%20catering%20Anda!"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 200, damping: 10 }}
-      >
-        <motion.div
-          animate={{
-            scale: [1, 1.15, 1],
-            rotate: [0, -5, 5, 0],
-          }}
-          transition={{
-            repeat: Infinity,
-            repeatType: "reverse",
-            duration: 1.5,
-          }}
-        >
-          <FaWhatsapp className="w-7 h-7" />
-        </motion.div>
-      </motion.a>
     </div>
   );
 };

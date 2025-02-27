@@ -1,16 +1,6 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaHome,
-  FaClock,
-} from "react-icons/fa";
-import {
-  FaFileContract,
-  FaMailchimp,
-  FaPrescriptionBottleMedical,
-} from "react-icons/fa6";
+import { FaFacebook, FaInstagram, FaHome, FaClock } from "react-icons/fa";
+import { FaMailchimp } from "react-icons/fa6";
 import { FiSmartphone } from "react-icons/fi";
 
 const Footer = () => {
@@ -69,9 +59,9 @@ const Footer = () => {
               Social Media
             </h2>
             <div className="flex font-poppins font-thin items-center mb-2">
-              <FaFacebook size={20} />
+              <img src="/images/mbiz.svg" alt="MbizLogo" className="h-5" />
               <a
-                href="https://www.mbizmarket.co.id/p/ud-endra-p1X1/catalog?fbclid=IwY2xjawIs0A9leHRuA2FlbQIxMQABHRDCB1y1FWaSifMMmTyZ2ghBPq5stAZg8oHz89Ul9s5pHlgquN6zo1-lNw_aem_AmhfkTAPRvC0QtZSJxLIJA"
+                href="https://www.mbizmarket.co.id/p/kayla-catering-cake-snack-bakery-p1X1/catalog"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white ml-2"
@@ -79,6 +69,18 @@ const Footer = () => {
                 Mbiz Market
               </a>
             </div>
+            <div className="flex font-poppins font-thin items-center mb-2">
+              <FaFacebook size={20} />
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white ml-2"
+              >
+                Facebook
+              </a>
+            </div>
+
             <div className="flex font-poppins font-thin items-center mb-2">
               <FaInstagram size={20} />
               <a

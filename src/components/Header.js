@@ -81,15 +81,18 @@ const Header = () => {
 
         {/* Contact Info */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
-          <DevicePhoneMobileIcon
-            aria-hidden="true"
-            className="size-5 text-gray-700"
-          />
           <a
-            href="#"
-            className="text-sm font-poppins font-semibold text-gray-900 ml-2 hover:text-pink-600 transition-colors"
+            href="https://www.mbizmarket.co.id/p/kayla-catering-cake-snack-bakery-p1X1/catalog"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center border-2 border-red-500 text-red-500 bg-white px-6 py-2 rounded-lg text-lg font-semibold transition duration-300 hover:bg-red-500 hover:text-white"
           >
-            +62 821-3440-6948
+            <img
+              src="/images/mbiz.svg"
+              alt="MbizLogo"
+              className="h-6 w-6 mr-2"
+            />
+            Mbiz Market
           </a>
         </div>
       </nav>

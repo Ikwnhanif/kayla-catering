@@ -1,10 +1,8 @@
 import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { menuData } from "../data/menu";
 import Services from "./Services";
 import Menus from "./Menus";
 import Contact from "./Contact";
@@ -13,57 +11,32 @@ gsap.registerPlugin(ScrollTrigger);
 const Home = () => {
   const heroRef = useRef(null);
   const blobRef = useRef(null);
+  const menuRef = useRef(null);
+  const contactRef = useRef(null);
 
   useLayoutEffect(() => {
-    gsap.fromTo(
-      heroRef.current,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }
-    );
+    let ctx = gsap.context(() => {
+      gsap.fromTo(
+        heroRef.current,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, duration: 1.2, ease: "power3.out" }
+      );
 
-    gsap.fromTo(
-      blobRef.current,
-      { opacity: 0 },
-      { opacity: 0.2, duration: 1, ease: "power3.out" }
-    );
+      gsap.fromTo(
+        blobRef.current,
+        { opacity: 0 },
+        { opacity: 0.2, duration: 1, ease: "power3.out" }
+      );
+    });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
+    return () => ctx.revert(); // Cleanup GSAP animations
   }, []);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-    appendDots: (dots) => (
-      <div className="w-full flex justify-center items-center mt-5">
-        <ul className="flex gap-2">{dots}</ul>
-      </div>
-    ),
-
-    customPaging: (i) => (
-      <div className="w-4 h-4 bg-gray-200 rounded-full transition-all duration-300 hover:bg-red-500 cursor-pointer "></div>
-    ),
+  const scrollToMenu = () => {
+    menuRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -110,7 +83,7 @@ const Home = () => {
         <div className="mt-8 flex space-x-6">
           {/* Tombol Hubungi Kami */}
           <a
-            href="/contact"
+            onClick={scrollToContact}
             className="liquid-button relative inline-block px-5 py-4 text-lg font-mono text-white transition-transform duration-300 transform bg-red-500 rounded-full shadow-md overflow-hidden border-2 border-red-400"
           >
             Hubungi Kami
@@ -119,7 +92,7 @@ const Home = () => {
 
           {/* Tombol Lihat Menu */}
           <a
-            href="/menus"
+            onClick={scrollToMenu}
             className="liquid-button relative inline-block px-5 py-4 text-lg font-mono text-white transition-transform duration-300 transform bg-amber-500 rounded-full shadow-md overflow-hidden border-2 border-amber-400"
           >
             Lihat Menu
@@ -182,7 +155,7 @@ const Home = () => {
       {/* End About */}
 
       {/* Menu Section */}
-      <section>
+      <section ref={menuRef}>
         <Menus />
       </section>
       {/* End Menu Section */}
@@ -191,7 +164,7 @@ const Home = () => {
         <Testimonials />
       </section>
       {/* Contact */}
-      <section>
+      <section ref={contactRef}>
         <Contact />
       </section>
     </div>

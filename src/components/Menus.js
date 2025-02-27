@@ -39,8 +39,9 @@ const Menus = () => {
   };
 
   return (
-    <section className="py-16 ">
+    <section className="py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        {/* Judul */}
         <h1 className="text-4xl font-semibold font-poppins text-center text-red-600 mb-4">
           Menu Spesial Kami 🍽️
         </h1>
@@ -48,6 +49,8 @@ const Menus = () => {
           Pilih dari berbagai hidangan lezat yang kami tawarkan, dibuat dengan
           bahan berkualitas dan disajikan dengan cinta.
         </p>
+
+        {/* Daftar Menu */}
         {Object.keys(menuData).map((category) => (
           <div key={category} className="mb-16 relative">
             <h2 className="text-3xl font-semibold text-red-700 capitalize mb-4 text-center">
@@ -76,6 +79,22 @@ const Menus = () => {
             </Slider>
           </div>
         ))}
+      </div>
+      {/* Tambahan: Mbiz Market e-Katalog (Satu kali di atas) */}
+      <div className="text-center mb-10">
+        <p className="text-2xl font-poppins font-semibold text-gray-600 mb-3">
+          Ingin melihat lebih banyak menu kami? Lihat di e-katalog Mbiz Market!
+        </p>
+
+        <a
+          href="https://www.mbizmarket.co.id/p/kayla-catering-cake-snack-bakery-p1X1/catalog"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center border-2 border-red-500 text-red-500 bg-white px-6 py-2 rounded-lg text-lg font-semibold transition duration-300 hover:bg-red-500 hover:text-white"
+        >
+          <img src="/images/mbiz.svg" alt="MbizLogo" className="h-6 w-6 mr-2" />
+          Lihat e-katalog
+        </a>
       </div>
     </section>
   );

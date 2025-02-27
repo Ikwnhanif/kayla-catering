@@ -6,7 +6,7 @@ export const products = [
     name: "Gubukan",
     href: "#",
     price: "$48",
-    imageSrc: "images/Gubukan/g2.jpg",
+    imageSrc: "images/Gubukan/g2.JPG",
     imageAlt: "Gubukan1",
   },
 
@@ -15,7 +15,7 @@ export const products = [
     name: "Gubukan",
     href: "#",
     price: "$89",
-    imageSrc: "images/Gubukan/g4.jpg",
+    imageSrc: "images/Gubukan/g4.JPG",
     imageAlt:
       "Person using a pen to cross a task off a productivity paper card.",
   },
@@ -33,7 +33,7 @@ export const products = [
     name: "Kayla Nasi Box",
     href: "#",
     price: "$48",
-    imageSrc: "images/nasiBox/g15.jpg",
+    imageSrc: "images/NasiBox/g15.jpg",
     imageAlt:
       "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
   },
@@ -42,7 +42,7 @@ export const products = [
     name: "Kayla Nasi Box",
     href: "#",
     price: "$35",
-    imageSrc: "images/nasiBox/g8.jpg",
+    imageSrc: "images/NasiBox/g8.jpg",
     imageAlt:
       "Olive drab green insulated bottle with flared screw lid and flat top.",
   },
@@ -51,7 +51,7 @@ export const products = [
     name: "Kayla Nasi Box",
     href: "#",
     price: "$89",
-    imageSrc: "images/nasiBox/g10.jpg",
+    imageSrc: "images/NasiBox/g10.jpg",
     imageAlt:
       "Person using a pen to cross a task off a productivity paper card.",
   },
@@ -60,7 +60,7 @@ export const products = [
     name: "Kayla Nasi Box",
     href: "#",
     price: "$35",
-    imageSrc: "images/nasiBox/g13.jpg",
+    imageSrc: "images/NasiBox/g13.jpg",
     imageAlt:
       "Hand holding black machined steel mechanical pencil with brass tip and top.",
   },
@@ -69,14 +69,14 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$48",
-    imageSrc: "images/Prasmanan/g16.jpg",
+    imageSrc: "images/Prasmanan/g16.JPG",
   },
   {
     id: 10,
     name: "Prasmanan",
     href: "#",
     price: "$50",
-    imageSrc: "images/Prasmanan/g17.jpg",
+    imageSrc: "images/Prasmanan/g17.JPG",
     imageAlt: "Prasmanan1",
   },
   {
@@ -84,7 +84,7 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$55",
-    imageSrc: "images/Prasmanan/g18.jpg",
+    imageSrc: "images/Prasmanan/g18.JPG",
     imageAlt: "Prasmanan2",
   },
   {
@@ -92,7 +92,7 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$60",
-    imageSrc: "images/Prasmanan/g19.jpg",
+    imageSrc: "images/Prasmanan/g19.JPG",
     imageAlt: "Prasmanan3",
   },
   {
@@ -100,7 +100,7 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$65",
-    imageSrc: "images/Prasmanan/g20.jpg",
+    imageSrc: "images/Prasmanan/g20.JPG",
     imageAlt: "Prasmanan4",
   },
   {
@@ -108,7 +108,7 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$70",
-    imageSrc: "images/Prasmanan/g21.jpg",
+    imageSrc: "images/Prasmanan/g21.JPG",
     imageAlt: "Prasmanan5",
   },
   {
@@ -116,7 +116,7 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$75",
-    imageSrc: "images/Prasmanan/g22.jpg",
+    imageSrc: "images/Prasmanan/g22.JPG",
     imageAlt: "Prasmanan6",
   },
   {
@@ -124,7 +124,7 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$80",
-    imageSrc: "images/Prasmanan/g23.jpg",
+    imageSrc: "images/Prasmanan/g23.JPG",
     imageAlt: "Prasmanan7",
   },
   {
@@ -132,7 +132,7 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$85",
-    imageSrc: "images/Prasmanan/g24.jpg",
+    imageSrc: "images/Prasmanan/g24.JPG",
     imageAlt: "Prasmanan8",
   },
   {
@@ -140,7 +140,7 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$90",
-    imageSrc: "images/Prasmanan/g25.jpg",
+    imageSrc: "images/Prasmanan/g25.JPG",
     imageAlt: "Prasmanan9",
   },
   {
@@ -148,7 +148,7 @@ export const products = [
     name: "Prasmanan",
     href: "#",
     price: "$95",
-    imageSrc: "images/Prasmanan/g26.jpg",
+    imageSrc: "images/Prasmanan/g26.JPG",
     imageAlt: "Prasmanan10",
   },
   {
