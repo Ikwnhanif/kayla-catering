@@ -27,7 +27,7 @@ const FloatingButtons = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center space-y-3">
+    <div className="fixed bottom-6 right-6 z-40 flex flex-col items-center space-y-3">
       {/* Tombol Scroll Up */}
       {showScroll && (
         <motion.button
@@ -44,7 +44,7 @@ const FloatingButtons = () => {
       )}
 
       {/* Tombol WhatsApp */}
-      <div className="flex flex-col items-center space-y-1">
+      <div className="flex flex-col items-center z-40 space-y-1">
         <motion.a
           href={`https://wa.me/${whatsappNumber}?text=${defaultMessage}`}
           target="_blank"
