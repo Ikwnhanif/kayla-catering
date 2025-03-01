@@ -16,3 +16,4 @@ Overall, the Kayla Catering project aims to provide an informative and appealing
 
 ![image](https://github.com/user-attachments/assets/e07206e4-b1df-4f27-9488-e60d6b0a3ed4)
 
+![image](https://github.com/user-attachments/assets/15b6dc95-f999-4ceb-86a4-b82a2f9a2315)
