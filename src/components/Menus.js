@@ -42,8 +42,8 @@ const Menus = () => {
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Judul */}
-        <h1 className="text-4xl font-semibold font-poppins text-center text-red-600 mb-4">
-          Menu Spesial Kami 🍽️
+        <h1 className="text-5xl font-bold font-poppins text-center text-red-600 mb-4">
+          Menu Spesial Kami
         </h1>
         <p className="text-lg text-center font-poppins text-gray-600 mb-6">
           Pilih dari berbagai hidangan lezat yang kami tawarkan, dibuat dengan
@@ -53,7 +53,7 @@ const Menus = () => {
         {/* Daftar Menu */}
         {Object.keys(menuData).map((category) => (
           <div key={category} className="mb-16 relative">
-            <h2 className="text-3xl font-semibold font-poppins text-red-700 capitalize mb-4 text-center">
+            <h2 className="text-3xl font-bold font-poppins text-red-700 capitalize mb-4 text-center">
               {category.replace(/([A-Z])/g, " $1").trim()}
             </h2>
             <Slider {...settings}>

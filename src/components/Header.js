@@ -77,12 +77,12 @@ const Header = () => {
           href="https://www.mbizmarket.co.id/p/kayla-catering-cake-snack-bakery-p1X1/catalog"
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden lg:flex items-center border-2 border-red-500 text-red-500 bg-white px-6 py-2 rounded-lg text-lg font-semibold transition hover:bg-red-500 hover:text-white"
+          className="hidden lg:flex items-center border-2 border-red-500 text-red-500 bg-white px-6 py-2 rounded-lg text-sm font-semibold transition hover:bg-red-500 hover:text-white"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <img src="/images/mbiz.svg" alt="MbizLogo" className="h-6 w-6 mr-2" />
-          Mbiz Market
+          Lihat Katalog MbizMarket
         </motion.a>
       </nav>
 

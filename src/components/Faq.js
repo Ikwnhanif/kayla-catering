@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
@@ -53,38 +53,44 @@ export default function FAQ() {
 
   return (
     <div className="max-w-3xl mx-auto pt-28 px-6 py-16">
-      <h2 className="text-3xl font-poppins font-semibold text-center text-gray-900 mb-10">
-        Frequency Ask Question(FAQ)
+      <h2 className="text-4xl font-poppins font-bold text-center text-red-600 mb-12">
+        Frequently Asked Questions
       </h2>
-      <div className="space-y-4">
+      <div className="space-y-6">
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-gray-300 rounded-lg overflow-hidden shadow-sm"
+            className="border border-gray-200 rounded-xl overflow-hidden shadow-md bg-white"
           >
             <button
-              className="w-full flex justify-between items-center p-4 bg-gray-100 hover:bg-gray-200 transition-all"
+              className={`w-full flex justify-between items-center p-5 text-left transition-all ${
+                openIndex === index
+                  ? "bg-red-600 text-white"
+                  : "bg-gray-100 text-gray-900"
+              } hover:bg-red-500 hover:text-white rounded-lg`}
               onClick={() => toggleFAQ(index)}
             >
-              <span className="text-lg font-poppins font-medium text-gray-900">
-                {faq.question}
-              </span>
-              <ChevronDown
-                className={`w-5 h-5 transition-transform transform ${
-                  openIndex === index ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </button>
-            {openIndex === index && (
+              <span className="text-lg font-semibold">{faq.question}</span>
               <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                className="p-4 font-roboto bg-white text-gray-700"
+                animate={{ rotate: openIndex === index ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
               >
-                {faq.answer}
+                <ChevronDown className="w-6 h-6" />
               </motion.div>
-            )}
+            </button>
+            <AnimatePresence>
+              {openIndex === index && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="p-5 text-gray-700 font-roboto bg-gray-50 rounded-b-lg"
+                >
+                  {faq.answer}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ))}
       </div>

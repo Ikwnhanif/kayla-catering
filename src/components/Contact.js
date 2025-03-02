@@ -1,9 +1,35 @@
-import React from "react";
-import { Button } from "flowbite-react";
-import { FaWhatsapp } from "react-icons/fa";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    nama: "",
+    lokasi: "",
+    pesan: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const sendMessage = (e) => {
+    e.preventDefault();
+
+    const { nama, lokasi, pesan } = formData;
+
+    if (!nama || !lokasi || !pesan) {
+      alert("Harap isi semua kolom sebelum mengirim pesan.");
+      return;
+    }
+
+    const phoneNumber = "6282134406948"; // Nomor WhatsApp tujuan (tanpa +)
+    const message = `Halo, saya ${nama}%0ALokasi: ${lokasi}%0APesan: ${pesan}`;
+
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <div className="relative px-6 py-24 sm:py-32">
       {/* Header */}
@@ -57,23 +83,29 @@ const Contact = () => {
           whileHover={{ scale: 1.02 }}
         >
           <h3 className="text-xl font-semibold text-gray-800">Kirim Pesan</h3>
-          <form className="mt-4 space-y-4">
+          <form className="mt-4 space-y-4" onSubmit={sendMessage}>
             <div>
               <label className="block text-sm font-medium text-gray-700">
                 Nama
               </label>
               <input
                 type="text"
+                name="nama"
+                value={formData.nama}
+                onChange={handleChange}
                 required
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2"
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700">
-                Email
+                Lokasi
               </label>
               <input
-                type="email"
+                type="text"
+                name="lokasi"
+                value={formData.lokasi}
+                onChange={handleChange}
                 required
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2"
               />
@@ -83,6 +115,9 @@ const Contact = () => {
                 Pesan
               </label>
               <textarea
+                name="pesan"
+                value={formData.pesan}
+                onChange={handleChange}
                 required
                 rows="4"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 p-2"
@@ -90,9 +125,9 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-pink-600 text-white font-semibold py-2 rounded-md hover:bg-pink-500 transition duration-200"
+              className="w-full bg-red-600 text-white font-semibold py-2 rounded-md hover:bg-red-500 transition duration-200"
             >
-              Kirim Pesan
+              Kirim Pesan via WhatsApp
             </button>
           </form>
         </motion.div>

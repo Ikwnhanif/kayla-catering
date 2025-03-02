@@ -1,5 +1,5 @@
 export const menuData = {
-  prasmanan: [
+  PRASMANAN: [
     {
       id: 1,
       name: "Prasmanan",
@@ -67,7 +67,7 @@ export const menuData = {
       imageAlt: "Prasmanan",
     },
   ],
-  gubukanStall: [
+  GUBUKAN: [
     {
       id: 1,
       name: "Gubukan",
@@ -111,7 +111,7 @@ export const menuData = {
       imageAlt: "Gubukan",
     },
   ],
-  nasiBox: [
+  NASIBOX: [
     {
       id: 1,
       name: "Nasi Box",
@@ -186,7 +186,7 @@ export const menuData = {
       imageAlt: "Nasi Box",
     },
   ],
-  snackBox: [
+  SNACKBOX: [
     {
       id: 1,
       name: "Snack Box",
@@ -225,7 +225,7 @@ export const menuData = {
     },
   ],
 
-  tumpeng: [
+  TUMPENG: [
     {
       id: 1,
       name: "Tumpeng",
