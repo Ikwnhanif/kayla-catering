@@ -53,7 +53,7 @@ const Menus = () => {
         {/* Daftar Menu */}
         {Object.keys(menuData).map((category) => (
           <div key={category} className="mb-16 relative">
-            <h2 className="text-3xl font-semibold text-red-700 capitalize mb-4 text-center">
+            <h2 className="text-3xl font-semibold font-poppins text-red-700 capitalize mb-4 text-center">
               {category.replace(/([A-Z])/g, " $1").trim()}
             </h2>
             <Slider {...settings}>
@@ -66,7 +66,7 @@ const Menus = () => {
                       className="w-full h-80 object-cover"
                     />
                     <div className="p-4 text-center">
-                      <h3 className="text-lg font-semibold text-gray-800">
+                      <h3 className="text-lg font-thin font-poppins text-gray-800">
                         {item.name}
                       </h3>
                       <p className="text-sm text-gray-500 mt-1">
