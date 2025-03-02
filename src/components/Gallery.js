@@ -1,68 +1,57 @@
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { products } from "../data/product";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { products } from "../data/product"; // Data produk
 
-gsap.registerPlugin(ScrollTrigger);
+const getRandomSize = () => {
+  const sizes = [
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1",
+    "col-span-1 row-span-1", // Tidak terlalu vertikal
+    "col-span-1 row-span-1",
+  ];
+  return sizes[Math.floor(Math.random() * sizes.length)];
+};
 
 const Gallery = () => {
-  const galleryRef = useRef(null);
+  const [shuffledProducts, setShuffledProducts] = useState([]);
 
   useEffect(() => {
-    const galleryItems = galleryRef.current.children;
-
-    gsap.set(galleryItems, { opacity: 0, y: 50, scale: 0.9 });
-
-    gsap.utils.toArray(galleryItems).forEach((item) => {
-      gsap.fromTo(
-        item,
-        { opacity: 0, y: 50, scale: 0.9 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 90%", // Saat elemen hampir masuk viewport
-            end: "top 20%", // Saat elemen keluar viewport
-            toggleActions: "play reverse play reverse", // Animasi balik saat elemen tidak terlihat
-          },
-        }
-      );
-    });
+    // Mengacak urutan gambar
+    const shuffled = [...products].sort(() => Math.random() - 0.5);
+    setShuffledProducts(shuffled);
   }, []);
 
   return (
-    <section className="pt-20 pb-16">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="py-20 px-6">
+      <div className="mx-auto max-w-7xl">
         <h2 className="text-center text-4xl font-bold font-poppins text-red-600 sm:text-5xl mb-12">
           ✨ Galeri Menu Kami ✨
         </h2>
 
-        {/* Grid Produk */}
-        <div
-          ref={galleryRef}
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-        >
-          {products.map((product) => (
-            <div
+        {/* Grid Gallery */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {shuffledProducts.map((product) => (
+            <motion.div
               key={product.id}
-              className="group relative overflow-hidden rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+              className={`relative overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 ${getRandomSize()}`}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
             >
+              {/* Gambar */}
               <img
                 src={product.imageSrc}
                 alt={product.imageAlt}
-                className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover"
               />
-              {/* Overlay Blur & Nama Menu */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
-                <span className="text-white text-lg font-semibold bg-black/30 px-3 py-1 rounded-md backdrop-blur-md">
+
+              {/* Overlay dengan Nama Menu */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                <span className="text-white text-xl font-semibold font-roboto px-4 py-2  uppercase">
                   {product.name}
                 </span>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -82,7 +82,7 @@ const Header = () => {
           whileTap={{ scale: 0.95 }}
         >
           <img src="/images/mbiz.svg" alt="MbizLogo" className="h-6 w-6 mr-2" />
-          Lihat Katalog MbizMarket
+          Lihat E-Katalog LKPP
         </motion.a>
       </nav>
 

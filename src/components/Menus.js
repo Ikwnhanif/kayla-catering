@@ -93,7 +93,7 @@ const Menus = () => {
           className="inline-flex items-center border-2 border-red-500 text-red-500 bg-white px-6 py-2 rounded-lg text-lg font-semibold transition duration-300 hover:bg-red-500 hover:text-white"
         >
           <img src="/images/mbiz.svg" alt="MbizLogo" className="h-6 w-6 mr-2" />
-          Lihat e-katalog
+          Lihat E-Katalog LKPP
         </a>
       </div>
     </section>

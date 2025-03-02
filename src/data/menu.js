@@ -66,6 +66,18 @@ export const menuData = {
       imageSrc: "images/Prasmanan/g26.JPG",
       imageAlt: "Prasmanan",
     },
+    {
+      id: 12,
+      name: "Prasmanan",
+      imageSrc: "images/mbiz/p1.webp",
+      imageAlt: "Prasmanan",
+    },
+    {
+      id: 13,
+      name: "Prasmanan",
+      imageSrc: "images/mbiz/p2.webp",
+      imageAlt: "Prasmanan",
+    },
   ],
   GUBUKAN: [
     {
@@ -188,7 +200,25 @@ export const menuData = {
   ],
   SNACKBOX: [
     {
-      id: 1,
+      id: 2,
+      name: "SnackBox",
+      imageSrc: "images/mbiz/s2.webp",
+      imageAlt: "SnackBox",
+    },
+    {
+      id: 3,
+      name: "SnackBox",
+      imageSrc: "images/mbiz/s4.webp",
+      imageAlt: "SnackBox",
+    },
+    {
+      id: 4,
+      name: "SnackBox",
+      imageSrc: "images/mbiz/s5.webp",
+      imageAlt: "SnackBox",
+    },
+    {
+      id: 10,
       name: "Snack Box",
       imageSrc: "images/SnackBox/g36.jpg",
       imageAlt: "Snack Box6",
@@ -199,6 +229,7 @@ export const menuData = {
       imageSrc: "images/SnackBox/g37.jpg",
       imageAlt: "Snack Box5",
     },
+
     {
       id: 12,
       name: "Snack Box",
@@ -248,6 +279,24 @@ export const menuData = {
       id: 4,
       name: "Tumpeng",
       imageSrc: "images/Tumpeng/g43.jpg",
+      imageAlt: "Tumpeng",
+    },
+    {
+      id: 5,
+      name: "Tumpeng",
+      imageSrc: "images/mbiz/t1.webp",
+      imageAlt: "Tumpeng",
+    },
+    {
+      id: 6,
+      name: "Tumpeng",
+      imageSrc: "images/mbiz/t2.webp",
+      imageAlt: "Tumpeng",
+    },
+    {
+      id: 7,
+      name: "Tumpeng",
+      imageSrc: "images/mbiz/t3.webp",
       imageAlt: "Tumpeng",
     },
   ],
